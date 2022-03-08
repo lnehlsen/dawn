@@ -58,8 +58,7 @@
           <div class="loading-overlay gradient"></div>
   
           <ul id="product-grid" data-id="{{ section.id }}" class="
-            {{ collapsed_class }} contains-card
-            grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
+            contains-card grid product-grid {{ collapsed_class }} grid--{{ section.settings.columns_mobile }}-col-tablet-down
             grid--{{ section.settings.columns_desktop }}-col-desktop">
             {%- for product in collection.products -%}
               {% assign lazy_load = false %}
