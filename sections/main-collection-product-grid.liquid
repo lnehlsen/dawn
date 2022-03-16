@@ -21,16 +21,6 @@
   }
 {%- endstyle -%}
 
-{%- liquid
-  if settings.spacing_grid_horizontal == 0 and settings.spacing_grid_vertical == 0 and settings.card_style == 'card'
-    assign collapsed_class = 'grid--collapsed grid--collapsed-x grid--collapsed-y'
-  elsif settings.spacing_grid_horizontal == 0
-    assign collapsed_class = 'grid--collapsed grid--collapsed-x'
-  elsif settings.spacing_grid_vertical == 0 and settings.card_style == 'card'
-    assign collapsed_class = 'grid--collapsed grid--collapsed-y'
-  endif
--%}
-
 <div class="section-{{ section.id }}-padding">
   {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
@@ -58,7 +48,8 @@
           <div class="loading-overlay gradient"></div>
   
           <ul id="product-grid" data-id="{{ section.id }}" class="
-            contains-card grid product-grid {{ collapsed_class }} grid--{{ section.settings.columns_mobile }}-col-tablet-down
+            contains-card grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
+            {% render 'collapsed-classes' %}
             grid--{{ section.settings.columns_desktop }}-col-desktop">
             {%- for product in collection.products -%}
               {% assign lazy_load = false %}
