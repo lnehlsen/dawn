@@ -51,7 +51,7 @@
   height: calc(100% - var(--collapsed-offset-y));
 }
 
-/* horizontally offset shadows for all card types */
+/* horizontally all card types */
 .grid--collapsed-x.contains-card {
   margin-right: var(--collapsed-offset-x);
 }
@@ -61,7 +61,7 @@
   padding-bottom: var(--collapsed-offset-y);
 }
 
-/* horizontally offset shadows for all card types */
+/* horizontally offset all card types */
 .grid--collapsed-x.contains-card .card {
   margin-right: var(--collapsed-offset-x);
 }
@@ -80,10 +80,6 @@
 .grid--collapsed-y.contains-card .card--card:after {
   margin-top: var(--collapsed-shadow-offset-y);
 }
-/* this line would offset shadows for standard card text only, but should not apply to standard cards with images */
-/* .grid--collapsed.contains-card:not(.product-grid) .card--standard .card__inner:after {
-  margin-top: var(--collapsed-shadow-offset-y);
-} */
 
 .card--standard.card--text {
   background-color: transparent;
