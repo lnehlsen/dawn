@@ -1,3 +1,7 @@
+.section-collapsed.image-with-text {
+  margin-top: calc(var(--media-border-width) * -1);
+}
+
 .image-with-text .grid {
   margin-bottom: 0;
 }

@@ -1,3 +1,7 @@
+.section-collapsed .video-section {
+  margin-top: calc(var(--media-border-width) * -1);
+}
+
 .video-section__media {
   position: relative;
   padding-bottom: 56.25%;

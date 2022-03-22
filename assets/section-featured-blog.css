@@ -1,3 +1,8 @@
+.section-collapsed.blog {
+  margin-top: calc(var(--text-boxes-border-width) * -1);
+}
+
+
 .blog-placeholder {
   margin: 0 1.5rem;
   background: rgb(var(--color-background));

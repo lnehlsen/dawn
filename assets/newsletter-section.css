@@ -1,3 +1,7 @@
+.section-collapsed .newsletter__wrapper {
+  margin-top: calc(var(--text-boxes-border-width) * -1);
+}
+
 .newsletter__wrapper {
   padding-right: calc(4rem / var(--font-body-scale));
   padding-left: calc(4rem / var(--font-body-scale));

@@ -1,3 +1,7 @@
+.section-collapsed.collection {
+  margin-top: calc(var(--card-border-width) * -1);
+}
+
 @media screen and (max-width: 749px) {
   .collection .grid__item:only-child {
     flex: 0 0 100%;

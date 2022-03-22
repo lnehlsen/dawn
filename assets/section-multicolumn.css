@@ -21,6 +21,10 @@
   }
 }
 
+.section-collapsed.multicolumn {
+  margin-top: calc(var(--text-boxes-border-width) * -1);
+}
+
 .multicolumn-card__image-wrapper--third-width {
   width: 33%;
 }

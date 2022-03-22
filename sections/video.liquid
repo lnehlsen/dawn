@@ -15,7 +15,14 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+{%- liquid
+  assign collapsible = false
+  if section.settings.title == blank and section.settings.padding_top == 0
+    assign collapsible = true
+  endif
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient{% if collapsible %} section-collapsed{% endif %}">
   <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
     <div{% if section.settings.full_width %} class="page-width"{% endif %}>
       {%- unless section.settings.heading == blank -%}
